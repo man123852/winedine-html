@@ -1,2 +1,171 @@
+/* ===== Reset & Basic ===== */
+*{box-sizing:border-box}
+html,body{height:100%;width:100%;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif}
+img{max-width:100%;height:auto;display:block}
+
+/* ===== Full width layout ===== */
+.topbar {
+  width:100%;
+  background:#b29076;
+  color:#fff;
+  text-align:center;
+  padding:28px 12px;
+  font-size:1.25rem;
+  text-decoration:underline;
+}
+
+/* ===== Header / nav ===== */
+.masthead {
+  width:100%;
+  background:#562329;
+  color:#b29076;
+  padding:18px 12px 10px;
+  text-align:center;
+}
+.brand {
+  font-size: clamp(1.8rem, 5vw, 4.5rem);
+  letter-spacing:4px;
+  margin-bottom:8px;
+}
+.nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  padding-bottom:6px;
+}
+.nav a {
+  color:#b29076;
+  text-decoration:none;
+  font-size: clamp(1rem, 2.7vw, 2.2rem);
+  padding:6px 8px;
+}
+.nav a:hover{ text-decoration: underline; }
+
+/* ===== Hero banner ===== */
+/* .hero {
+  width:100%;
+  position:relative;
+  overflow:hidden;
+} */
+.hero img{ display:block; width:100%; height:auto; object-fit:cover; }
+/* .overlayTitle {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-weight:700;
+  font-size:clamp(2rem,6vw,5rem);
+  text-shadow:0 4px 18px rgba(0,0,0,.45);
+  
+} */
+
+/* ===== Product grid (re-usable) ===== */
+.product-grid {
+  width:100%;
+  padding:28px 24px;
+  display:grid;
+  gap:1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items:start;
+}
+.product {
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  padding:8px;
+  text-align:center;
+  box-shadow: 1px 1px 15px 1px black;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.product img{ height:160px; object-fit:cover; border-radius:10px; }
+.product-title{ font-size:1.1rem; font-weight:700; color:#222 }
+
+/* ===== card-row for store locator + gifting (ONE LINE) ===== */
+.card-row {
+  width:1500px;
+  display:flex;
+  gap:50px;
+  padding:28px 1px;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:nowrap;
+}
+.media-card { width:45%; border-radius:16px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.06);  border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+#textwhiskey{
+    position: absolute;
+    top: 1%;
+    /* color: grey; */
+    left: 2%;
+    font-size: 50px;
+    font-weight: 100px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.media-card:hover {
+    border-color: #b29076;  /* premium gold-brown glow */
+    box-shadow: 0 0 20px rgba(178, 144, 118, 0.7);
+}
+
+
+.media-card img{ height:300px; object-fit:cover; width: 100%; }
+
+.media-card img {
+    transform: translateY(-1px); /* move UP */
+}
+
+/* ===== whiskey barrel section ===== */
+.barrel { margin:32px 0; position:relative; border-radius:12px; overflow:hidden; }
+.barrel img{ display:block; width:100%; height:auto; }
+.barrel-title {
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:clamp(1.6rem,4.8vw,3.8rem);
+  margin:0;
+  text-shadow:0 6px 18px rgba(0,0,0,.6);
+}
+
+/* ===== CTA / download links ===== */
+.cta {
+  width:100%;
+  background:#b6a294;
+  color:#000;
+  padding:32px 16px;
+  text-align:center;
+  border-radius:8px;
+  margin:30px 0;
+}
+.cta h2{ margin:0 0 18px; font-family:"Times New Roman", Times, serif; font-size:clamp(1.25rem,3.2vw,2rem) }
+.download-links{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; align-items:center }
+.download-links img{ width:220px; height:auto; }
+
+/* ===== Footer ===== */
+footer{ width:100%; padding:18px; text-align:center; color:#444 }
+
+/* ===== Responsive tweaks ===== */
+@media (max-width:880px){
+  .media-card{ width:48% }
+  .media-card img{ height:220px }
+  .product img{ height:140px }
+}
+@media (max-width:620px){
+  .nav a{ font-size:1rem }
+  .brand{ font-size:2rem }
+  .card-row{ flex-wrap:wrap; gap:16px; }
+  .media-card{ width:100% } /* stack on small screens */
+}
 
 
